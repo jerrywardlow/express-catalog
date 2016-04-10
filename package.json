@@ -11,5 +11,8 @@
     "url": "https://github.com/jerrywardlow/express-tutorial.git"
   },
   "author": "Jerry Wardlow <jerry@jerryoftheyear.com> (http://jerryoftheyear.com)",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
 }
