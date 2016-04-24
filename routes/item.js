@@ -8,3 +8,5 @@ router.get('/', function(req, res) {
 router.get(':item_id', function(req, res) {
     res.send('generic info about item ' + req.params.item_id);
 });
+
+module.exports = router;
