@@ -23,6 +23,9 @@
   },
   "homepage": "https://github.com/jerrywardlow/express-catalog#readme",
   "dependencies": {
-    "express": "^4.13.4"
+    "connect-ratelimit": "0.0.7",
+    "express": "^4.13.4",
+    "helmet": "^1.3.0",
+    "morgan": "^1.7.0"
   }
 }
