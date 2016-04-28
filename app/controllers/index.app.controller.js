@@ -1,3 +1,3 @@
 exports.render = function(req, res) {
-    res.render('index' { title: 'title', message: 'placeholder'});
+    res.render('index', { title: 'title', message: 'placeholder'});
 };
