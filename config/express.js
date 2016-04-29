@@ -7,5 +7,8 @@ module.exports = function() {
     app.set('view engine', 'pug')
 
     require('../app/routes/index.app.routes.js')(app);
+
+    app.use(express.static('./public'));
+
     return app;
 };
