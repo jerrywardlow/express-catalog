@@ -1,8 +1,14 @@
+process.env.NODE_ENV = process.env.NODE_ENV || 'development';
+
+var config = require('./config/config');
+var mongoose = require('./config/mongoose');
 var express = require('./config/express');
+
+var db = mongoose();
 var app = express();
 
-app.listen(3000);
+app.listen(config.port);
 
 module.exports = app;
 
-console.log('Server up at localhost:3000');
+console.log('Server up at localhost:' + config.port);
