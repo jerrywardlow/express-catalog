@@ -12,7 +12,7 @@ var router = express.Router();
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://' + process.env.MONGO_HOST + '/api');
 
-var Duck = require('./app/models/duck');
+var Duck = require('./app/models/ducks');
 
 router.get('/', function(req, res) {
     res.json({ message: 'API up and running correctly!' });
@@ -20,7 +20,7 @@ router.get('/', function(req, res) {
 
 
 
-app.user('/api', router);
+app.use('/api', router);
 
 app.listen(port);
 console.log('Up and running on port ' + port);
