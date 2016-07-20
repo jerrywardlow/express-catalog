@@ -1,0 +1,26 @@
+{
+    "name": "express-catalog",
+    "version": "0.1.0",
+    "description": "Basic duck based catalog",
+    "main": "server.js",
+    "scripts": {
+        "test": "echo \"Looks good, push it!\"",
+        "start": "node server.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jerrywardlow/express-catalog.git"
+    },
+    "keywords": [
+        "express",
+        "MEAN",
+        "node",
+        "mongodb",
+        "ducks"
+    ],
+    "author": "Jerry Wardlow",
+    "license": "GPL-3.0",
+    "bugs": {
+        "url": "https://github.com/jerrywardlow/express-catalog/issues"
+    },
+    "homepage": "https://github.com/jerrywardlow/express-catalog#readme"
