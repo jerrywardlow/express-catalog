@@ -12,6 +12,7 @@ var router = express.Router();
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://' + process.env.MONGO_HOST + '/api');
 
+var Duck = require('./app/models/duck');
 
 router.get('/', function(req, res) {
     res.json({ message: 'API up and running correctly!' });
