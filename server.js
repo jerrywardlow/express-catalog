@@ -9,6 +9,10 @@ var port = process.env.PORT || 8080;
 
 var router = express.Router();
 
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://' + process.env.MONGO_HOST + '/api');
+
+
 router.get('/', function(req, res) {
     res.json({ message: 'API up and running correctly!' });
 });
