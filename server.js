@@ -44,6 +44,15 @@ router.route('/ducks')
         });
     });
 
+router.route('/ducks/:duck_id')
+
+    .get(function(req, res) {
+        Duck.findById(req.params.duck_id, function(err, duck) {
+            if (err) res.send(err);
+            res.json(duck);
+        });
+    });
+
 
 app.use('/api', router);
 
