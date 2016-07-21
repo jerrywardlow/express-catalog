@@ -64,6 +64,15 @@ router.route('/ducks/:duck_id')
                 res.json({ message: "Duck updated" });
             });
         });
+    })
+
+    .delete(function(req, res) {
+        Duck.remove({
+            _id: req.params.duck_id
+        }, function(err, duck) {
+            if (err) res.send(err);
+            res.json({ message: "Duck... terminated." });
+        });
     });
 
 
