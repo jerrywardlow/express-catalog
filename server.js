@@ -35,6 +35,14 @@ router.route('/ducks')
             res.json({ message: 'Created new duck' });
         });
     });
+    
+    .get(function(req, res) {
+        Duck.find(function(err, ducks) {
+            if (err) res.send(err);
+
+            res.json(ducks);
+        });
+    });
 
 
 app.use('/api', router);
