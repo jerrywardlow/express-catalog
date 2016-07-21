@@ -22,6 +22,19 @@ router.get('/', function(req, res) {
     res.json({ message: 'API up and running correctly!' });
 });
 
+router.route('/ducks')
+    
+    .post(function(req, res) {
+
+        var duck = new Duck();
+        duck.name = req.body.name;
+
+        duck.save(function(err) {
+            if (err) res.send(err);
+
+            res.json({ message: 'Created new duck' });
+        });
+    });
 
 
 app.use('/api', router);
