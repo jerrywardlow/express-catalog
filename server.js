@@ -34,7 +34,7 @@ router.route('/ducks')
 
             res.json({ message: 'Created new duck' });
         });
-    });
+    })
     
     .get(function(req, res) {
         Duck.find(function(err, ducks) {
