@@ -51,6 +51,19 @@ router.route('/ducks/:duck_id')
             if (err) res.send(err);
             res.json(duck);
         });
+    })
+
+    .put(function(req, res) {
+        Duck.findById(req.params.duck_id, function(err, duck) {
+            if (err) res.send(err);
+            
+            duck.name = req.body.name;
+
+            duck.save(function(err) {
+                if (err) res.send(err);
+                res.json({ message: "Duck updated" });
+            });
+        });
     });
 
 
